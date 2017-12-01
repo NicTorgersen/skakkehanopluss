@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SKHNP Innstillinger</title>
+        <style>
+            body {
+                overflow-y: scroll;
+                overflow-x: hidden;
+                margin: 0;
+                padding: 10px 10px 10px 10px;
+                background: #fff;
+
+                min-width: 200px;
+                font-size: 14px;
+            }
+
+            h3 {
+                text-align: center;
+                margin: 0 0 10px 0;
+            }
+
+            label {
+                padding: 10px;
+                background: #d80808;
+                color: #fff;
+                line-height: 1em;
+                display: block;
+                clear: both;
+                border-radius: 10px;
+            }
+            label:hover {
+                background: #a20000;
+                cursor: pointer;
+            }
+
+            label span {
+                line-height: 1.5em;
+                float: left;
+                width: 90%;
+            }
+
+            label input {
+                margin: 5px 0 0 0;
+                width: 12px;
+                height: 12px;
+                float:right;
+                width: 10%;
+            }
+            label input:hover {
+                cursor: pointer;
+            }
+
+            #notify-change {
+                padding: 10px;
+                background: #77a878;
+                color: #fff;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .hidden {
+                display: none;
+            }
+            .clearfix {
+                clear: both;
+            }
+        </style>
+        <script src="../jquery-3.2.1.min.js" type="text/javascript"></script>
+        <script src="popup.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h3>Ska'kke ha no' pluss!</h3>
+        <div id="notify-change" class="hidden"></div>
+        <label title="Skru av eller på popup etter endt filtrering" for="verbose">
+            <span>Verbose?</span>
+            <input id="verbose" type="checkbox">
+            <div class="clearfix"></div>
+        </label>
+    </body>
+</html>

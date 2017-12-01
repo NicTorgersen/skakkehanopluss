@@ -1,12 +1,31 @@
 (function ($) {
 
+		const blockedPapers = [
+			"www.vg.no",
+			"www.tb.no",
+			"www.dagbladet.no",
+			"www.adressa.no",
+			"www.bt.no",
+			"www.tk.no",
+			"www.smp.no",
+			"www.rbnett.no",
+			"www.gjengangeren.no",
+			"www.ta.no",
+			"www.varden.no",
+			"www.avisa-valdres.no",
+			"www.dn.no",
+			"www.ba.no",
+			"www.an.no",
+			"www.itromso.no",
+		]
+
     function getSiteElements (host) {
         var url = host,
             elements = [],
             count = 0
 
         switch (url) {
-            case "www.bt.no":
+            case "www.bt.no": // schibsted
                 var targets = $('.df-skin-paywall-closed')
 
                 $.each(targets, function (index, element) {
@@ -16,7 +35,7 @@
 
                 break
 
-            case "www.varden.no":
+            case "www.varden.no": // agderposten medier
                 var targets = $('.plus_button')
 
                 $.each(targets, function (index, element) {
@@ -44,10 +63,11 @@
 
                 break
 
-            case "www.ta.no":
+            case "www.ta.no": // amedia lokal
             case "www.gjengangeren.no":
             case "www.tb.no":
             case "www.ba.no":
+            case 'www.tk.no':
                 var targets = $('.df-skin-paywall')
                 $.each(targets, function (index, element) {
                     count++
@@ -56,7 +76,7 @@
 
                 break
 
-            case 'www.dagbladet.no':
+            case 'www.dagbladet.no': // aller media
                 var targets = [$('.label.black')]
                 var searchTerm = "Dagbladet Pluss"
 
@@ -71,9 +91,10 @@
 
                 break
 
-            case 'www.adressa.no':
+            case 'www.adressa.no': // adresseavisen gruppen
             case 'www.smp.no':
             case 'www.rbnett.no':
+            case 'www.itromso.no':
                 var targets = $('.payed')
                 $.each(targets, function (index, element) {
                     elements.push($(this))
@@ -82,7 +103,7 @@
 
                 break
 
-            case 'www.dn.no':
+            case 'www.dn.no': // nhst media group
                 var targets = $('.df-skin-paid')
                 $.each(targets, function (index, element) {
                     elements.push($(this))
@@ -91,20 +112,15 @@
 
                 break
 
-            case 'www.avisa-valdres.no':
+            case 'www.avisa-valdres.no': // valdres media
+            case 'www.an.no': // amedia
                 var targets = $('[class^=\'am-premium-\']')
                 $.each(targets, function (index, element) {
                     elements.push($(element).closest('.am-gridComp-item'))
                     count++
                 })
-                break
 
-            case 'www.tk.no':
-                var targets = $('.df-skin-paywall')
-                $.each(targets, function (index, element) {
-                    elements.push($(this))
-                    count++
-                })
+                break
         }
 
         return {

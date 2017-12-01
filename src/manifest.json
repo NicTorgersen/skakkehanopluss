@@ -5,7 +5,7 @@
     "description": "Fjerner plussartikler fra en rekke norske nettaviser.",
     "author": "Nic",
 
-    "version": "1.5.1",
+    "version": "1.5.6",
 
     "icons": {
         "16": "assets/icon16.png",
@@ -25,19 +25,22 @@
     "permissions": [
         "*://*.vg.no/*",
         "*://*.tb.no/*",
-        "*://*.dagbladet.no/",
-        "*://*.adressa.no/",
-        "*://*.bt.no/",
-        "*://*.tk.no/",
-        "*://*.smp.no/",
-        "*://*.rbnett.no/",
-        "*://*.gjengangeren.no/",
-        "*://*.ta.no/",
-        "*://*.varden.no/",
-        "*://*.avisa-valdres.no/",
-        "*://*.dn.no/",
-        "*://*.ba.no/",
-        "notifications"
+        "*://*.dagbladet.no/*",
+        "*://*.adressa.no/*",
+        "*://*.bt.no/*",
+        "*://*.tk.no/*",
+        "*://*.smp.no/*",
+        "*://*.rbnett.no/*",
+        "*://*.gjengangeren.no/*",
+        "*://*.ta.no/*",
+        "*://*.varden.no/*",
+        "*://*.avisa-valdres.no/*",
+        "*://*.dn.no/*",
+        "*://*.ba.no/*",
+        "*://*.an.no/*",
+        "*://*.itromso.no/*",
+        "notifications",
+        "storage"
     ],
 
     "background": {
@@ -61,9 +64,11 @@
                 "*://*.varden.no/",
                 "*://*.avisa-valdres.no/",
                 "*://*.dn.no/",
-                "*://*.ba.no/"
+                "*://*.ba.no/",
+                "*://*.an.no/",
+                "*://*.itromso.no/"
             ],
-            "js": ["libs/jquery-1.11.1.min.js", "content_scripts/remove_plus.js"]
+            "js": ["jquery-3.2.1.min.js", "content_scripts/remove_plus.js"]
         }
     ]
 }

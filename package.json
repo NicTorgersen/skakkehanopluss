@@ -1,11 +1,19 @@
 {
   "name": "skakkehanopluss",
-  "version": "1.5.1",
+  "version": "1.5.6",
   "description": "Extension for blocking plus articles.",
   "main": "index.js",
   "scripts": {
+    "build": "gulp",
+    "watch": "gulp debug:watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nic <nichlas.torgersen@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-watch": "^4.3.11",
+    "gulp-zip": "^4.0.0"
+  }
 }
