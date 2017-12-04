@@ -1,7 +1,7 @@
 (function ($) {
 
     function saveVerboseOption (state) {
-        storage.sync.set({'verbose': state}, function () {
+        browser.storage.sync.set({'verbose': state}, function () {
             notifyChange("Lagret endringer.")
         })
     }
@@ -17,7 +17,7 @@
     $(document).ready(function () {
         var inputs = {'verbose': $('#verbose')}
 
-        storage.onChanged.addListener((changes, namespaces) => {
+        browser.storage.onChanged.addListener((changes, namespaces) => {
             for (var key in changes) {
                 var storageChange = changes[key]
                 for (var input in inputs) {
@@ -31,7 +31,7 @@
 
         for (var input in inputs) {
             var el = inputs[input]
-            storage.sync.get(input, (obj) => {
+            browser.storage.sync.get(input, (obj) => {
                 el.prop('checked', obj[input])
             })
         }
