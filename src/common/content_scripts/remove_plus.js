@@ -1,28 +1,28 @@
 (function ($) {
 
-		const blockedPapers = [
-			"www.vg.no",
-			"www.tb.no",
-			"www.dagbladet.no",
-			"www.adressa.no",
-			"www.bt.no",
-			"www.tk.no",
-			"www.smp.no",
-			"www.rbnett.no",
-			"www.gjengangeren.no",
-			"www.ta.no",
-			"www.varden.no",
-			"www.avisa-valdres.no",
-			"www.dn.no",
-			"www.ba.no",
-			"www.an.no",
-			"www.itromso.no",
-		]
+	const blockedPapers = [
+		"www.vg.no",
+		"www.tb.no",
+		"www.dagbladet.no",
+		"www.adressa.no",
+		"www.bt.no",
+		"www.tk.no",
+		"www.smp.no",
+		"www.rbnett.no",
+		"www.gjengangeren.no",
+		"www.ta.no",
+		"www.varden.no",
+		"www.avisa-valdres.no",
+		"www.dn.no",
+		"www.ba.no",
+		"www.an.no",
+		"www.itromso.no",
+	]
 
     function getSiteElements (host) {
-        var url = host,
-            elements = [],
-            count = 0
+        var url = host
+        var elements = []
+        var count = 0
 
         switch (url) {
             case "www.bt.no": // schibsted
@@ -124,32 +124,25 @@
         }
 
         return {
-            elements: elements,
+            elements: elements, 
             count: count
         }
     }
 
     $(document).ready(function () {
-        var site = window.location.host,
-            parent_nodes = getSiteElements(site),
-            count = parent_nodes.count
+        var site = window.location.host
+        var nodes_to_remove = getSiteElements(site)
+        var count = nodes_to_remove.count
 
         chrome.runtime.sendMessage({
             type: 'notifyRemove', url: site, objectsFound: count
         })
 
-        for (var i = 0; i < parent_nodes.elements.length; i++) {
-            if (parent_nodes.elements[i].length > 0 && typeof parent_nodes.elements[i] !== 'undefined') {
-                var currentElement = parent_nodes.elements[i],
-                    cachedHeight = currentElement.height(),
-                    cachedWidth = currentElement.width()
-
-                // currentElement.empty()
-                // currentElement.css({
-                //     'height': cachedHeight,
-                //     'width': cachedWidth,
-                //     'background': 'rgba(216, 8, 8, 0.1)'
-                // })
+        for (var i = 0; i < nodes_to_remove.elements.length; i++) {
+            if (nodes_to_remove.elements[i].length > 0 && typeof nodes_to_remove.elements[i] !== 'undefined') {
+                var currentElement = nodes_to_remove.elements[i]
+                var cachedHeight = currentElement.height()
+                var cachedWidth = currentElement.width()
 
                 currentElement.css('display', 'none')
             }

@@ -14,20 +14,52 @@
         }, 1000)
     }
 
-    $(document).ready(function () {
-        var inputs = {'verbose': $('#verbose')}
+    function toggleOption (key) {
+        var optionPromise = browser.storage.sync.get(key)
 
-        browser.storage.onChanged.addListener((changes, namespaces) => {
-            for (var key in changes) {
-                var storageChange = changes[key]
-                for (var input in inputs) {
-                    var el = inputs[input]
-                    if (key == input) {
-                        el.prop('checked', storageChange)
-                    }
+        optionPromise.then(function (optionValue) { // success
+            optionValue = optionValue || ''
+            if (optionValue.length != 0) {
+
+            }
+        }, function () { // error
+
+        })
+    }
+
+    browser.storage.onChanged.addListener((changes, namespaces) => {
+        for (var key in changes) {
+            var storageChange = changes[key]
+            for (var input in inputs) {
+                var el = inputs[input]
+                if (key == input) {
+                    el.prop('checked', storageChange)
                 }
             }
-        });
+        }
+    });
+
+
+    $(document).ready(function () {
+        var verboseCheckbox = $("#verbose")
+        var bigRedButton = $("#big-red-button")
+        var storagePromise = browser.storage.sync.get()
+        var buttonStrings = {
+            'unblock': "Jæ har pluss på denna sia.",
+            'block': "Jæ vi'kke ha no' pluss her lenger!",
+        }
+        
+        storagePromise.then(function (storageItems) => {
+            for (itemKey in storageItems) {
+                if (itemKey === 'verbose') {
+                    verboseCheckbox.prop('checked', storageItems['verbose'])
+                }
+
+                if (itemKey === window.location.host) {
+                    
+                }
+            }
+        })
 
         for (var input in inputs) {
             var el = inputs[input]
@@ -36,8 +68,12 @@
             })
         }
 
-        $("#verbose").click((evt) => {
-            saveVerboseOption(evt.target.checked)
+        verboseCheckbox.click((evt) => {
+            toggleOption('verbose')
+        })
+
+        bigRedButton.click((evt) => {
+            toggleOption(window.host)
         })
     })
 
