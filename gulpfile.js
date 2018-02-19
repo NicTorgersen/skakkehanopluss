@@ -18,11 +18,11 @@ const conf = {
 // snakk om quick'n'dirty shit
 
 gulp.task('chrome:debug', () => {
-    gulp.src(['src/chrome/**', 'src/common/**', 'src/manifest.json', 'src/libs/**'])
+    gulp.src(['src/chrome/**', 'src/common/**', 'src/manifest.json'])
         .pipe(gulp.dest(conf.chrome.debug))
 })
 gulp.task('chrome:build', () => {
-    gulp.src(['src/chrome/**', 'src/common/**', 'src/manifest.json', 'src/libs/**'])
+    gulp.src(['src/chrome/**', 'src/common/**', 'src/manifest.json'])
         .pipe(gulp.dest(conf.chrome.build + 'tmp'))
         .pipe(gulp_zip('chrome-' + pconf.version + '.zip'))
         .pipe(gulp.dest(conf.chrome.build))
@@ -30,11 +30,11 @@ gulp.task('chrome:build', () => {
 })
 
 gulp.task('firefox:debug', () => {
-    gulp.src(['src/firefox/**', 'src/common/**', 'src/manifest.json', 'src/libs/**'])
+    gulp.src(['src/firefox/**', 'src/common/**', 'src/manifest.json'])
         .pipe(gulp.dest(conf.firefox.debug))
 })
 gulp.task('firefox:build', () => {
-    gulp.src(['src/firefox/**', 'src/common/**', 'src/manifest.json', 'src/libs/**'])
+    gulp.src(['src/firefox/**', 'src/common/**', 'src/manifest.json'])
         .pipe(gulp.dest(conf.firefox.build + 'tmp'))
         .pipe(gulp_zip('firefox-' + pconf.version + '.zip'))
         .pipe(gulp.dest(conf.firefox.build))

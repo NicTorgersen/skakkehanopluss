@@ -1,6 +1,6 @@
 {
   "name": "skakkehanopluss",
-  "version": "1.5.6",
+  "version": "1.5.7",
   "description": "Extension for blocking plus articles.",
   "main": "index.js",
   "scripts": {
