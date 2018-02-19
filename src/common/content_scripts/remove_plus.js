@@ -95,7 +95,7 @@
             case 'www.smp.no':
             case 'www.rbnett.no':
             case 'www.itromso.no':
-                var targets = [$('.relatedArticles .payed'), $('.payed > a')]
+                var targets = [$('.relatedArticles .payed'), $('.payed a')]
                 console.log(targets);
                 $.each(targets, function (index, element) {
                     elements.push($(this))

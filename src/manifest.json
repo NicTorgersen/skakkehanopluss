@@ -5,17 +5,13 @@
   "description": "Fjerner plussartikler fra en rekke norske nettaviser.",
   "author": "Nic",
 
-<<<<<<< HEAD
   "version": "1.5.6",
-=======
-    "version": "1.5.6",
-    "applications": {
-        "gecko": {
-            "id": "skakkehanopluss@nictorgersen.addons.mozilla.org"
-        }
-    },
+  "applications": {
+    "gecko": {
+      "id": "skakkehanopluss@nictorgersen.addons.mozilla.org"
+    }
+  },
 
->>>>>>> 524478e3894f18f108dad03713ab980b67252a5c
 
   "icons": {
     "16": "assets/icon16.png",
