@@ -2,16 +2,21 @@
 
     function saveVerboseOption (state) {
         chrome.storage.sync.set({'verbose': state}, function () {
-            notifyChange("Lagret endringer.")
+            notifyChange()
         })
     }
 
     function notifyChange (message) {
+        message = message || "Lagret endringer."
         $("#notify-change").empty().text(message)
         $("#notify-change").fadeIn(400, () => {})
         setTimeout(() => {
             $("#notify-change").fadeOut(400, () => {})
         }, 1000)
+    }
+
+    function toggleOption (key) {
+        chrome.
     }
 
     $(document).ready(function () {
