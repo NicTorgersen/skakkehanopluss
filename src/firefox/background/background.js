@@ -3,7 +3,7 @@ browser.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         browser.pageAction.show(sender.tab.id)
         browser.pageAction.setIcon({ "tabId": sender.tab.id, "path": "assets/icon38.png" })
 
-        storage.sync.get('verbose', (obj) => {
+        browser.storage.sync.get('verbose', (obj) => {
             if (obj.hasOwnProperty('verbose')) {
                 if (obj.verbose) {
                     var string = "Fjernet " + request.objectsFound + " plussartikler fra " + request.url + "."

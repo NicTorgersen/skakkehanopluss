@@ -1,74 +1,74 @@
 {
-    "manifest_version": 2,
-    "name": "Ska'kke ha no' pluss",
-    "short_name": "Ska'kke ha no' +",
-    "description": "Fjerner plussartikler fra en rekke norske nettaviser.",
-    "author": "Nic",
+  "manifest_version": 2,
+  "name": "Ska'kke ha no' pluss",
+  "short_name": "Ska'kke ha no' +",
+  "description": "Fjerner plussartikler fra en rekke norske nettaviser.",
+  "author": "Nic",
 
-    "version": "1.5.6",
+  "version": "1.5.6",
 
-    "icons": {
-        "16": "assets/icon16.png",
-        "48": "assets/icon48.png",
-        "128": "assets/icon.png"
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon.png"
+  },
+
+  "page_action": {
+    "default_icon": {
+      "38": "assets/icon38.png",
+      "128": "assets/icon.png"
     },
+    "default_title": "Ska'kke ha no' pluss",
+    "default_popup": "popup/popup.html"
+  },
 
-    "page_action": {
-        "default_icon": {
-            "38": "assets/icon38.png",
-            "128": "assets/icon.png"
-        },
-        "default_title": "Ska'kke ha no' pluss",
-        "default_popup": "popup/popup.html"
-    },
+  "permissions": [
+    "*://*.vg.no/*",
+    "*://*.tb.no/*",
+    "*://*.dagbladet.no/*",
+    "*://*.adressa.no/*",
+    "*://*.bt.no/*",
+    "*://*.tk.no/*",
+    "*://*.smp.no/*",
+    "*://*.rbnett.no/*",
+    "*://*.gjengangeren.no/*",
+    "*://*.ta.no/*",
+    "*://*.varden.no/*",
+    "*://*.avisa-valdres.no/*",
+    "*://*.dn.no/*",
+    "*://*.ba.no/*",
+    "*://*.an.no/*",
+    "*://*.itromso.no/*",
+    "notifications",
+    "storage"
+  ],
 
-    "permissions": [
-        "*://*.vg.no/*",
-        "*://*.tb.no/*",
-        "*://*.dagbladet.no/*",
-        "*://*.adressa.no/*",
-        "*://*.bt.no/*",
-        "*://*.tk.no/*",
-        "*://*.smp.no/*",
-        "*://*.rbnett.no/*",
-        "*://*.gjengangeren.no/*",
-        "*://*.ta.no/*",
-        "*://*.varden.no/*",
-        "*://*.avisa-valdres.no/*",
-        "*://*.dn.no/*",
-        "*://*.ba.no/*",
-        "*://*.an.no/*",
-        "*://*.itromso.no/*",
-        "notifications",
-        "storage"
-    ],
+  "background": {
+    "scripts": ["background/background.js"],
+    "persistent": false
+  },
 
-    "background": {
-        "scripts": ["background/background.js"],
-        "persistent": false
-    },
-
-    "content_scripts": [
-        {
-            "matches": [
-                "*://*.vg.no/",
-                "*://*.tb.no/",
-                "*://*.dagbladet.no/",
-                "*://*.bt.no/",
-                "*://*.adressa.no/",
-                "*://*.tk.no/",
-                "*://*.smp.no/",
-                "*://*.rbnett.no/",
-                "*://*.gjengangeren.no/",
-                "*://*.ta.no/",
-                "*://*.varden.no/",
-                "*://*.avisa-valdres.no/",
-                "*://*.dn.no/",
-                "*://*.ba.no/",
-                "*://*.an.no/",
-                "*://*.itromso.no/"
-            ],
-            "js": ["jquery-3.2.1.min.js", "content_scripts/remove_plus.js"]
-        }
-    ]
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.vg.no/",
+        "*://*.tb.no/",
+        "*://*.dagbladet.no/",
+        "*://*.bt.no/",
+        "*://*.adressa.no/",
+        "*://*.tk.no/",
+        "*://*.smp.no/",
+        "*://*.rbnett.no/",
+        "*://*.gjengangeren.no/",
+        "*://*.ta.no/",
+        "*://*.varden.no/",
+        "*://*.avisa-valdres.no/",
+        "*://*.dn.no/",
+        "*://*.ba.no/",
+        "*://*.an.no/",
+        "*://*.itromso.no/"
+      ],
+      "js": ["jquery-3.2.1.min.js", "content_scripts/remove_plus.js"]
+    }
+  ]
 }

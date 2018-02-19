@@ -1,11 +1,8 @@
 # Ska'ru'kke ha no' pluss, du'a?
-
-Hvis du er helt sikker på det...
-
 ## Sånn bygges prosjektet
 ### Noen forutsetninger
 Du må ha følgende programvare for å bruke verktøyene:
-- `node` og `npm`.
+- [`node`](https://nodejs.org/) og `npm`.
 
 ```cmd
 $ echo "Jeg har disse versjonene"

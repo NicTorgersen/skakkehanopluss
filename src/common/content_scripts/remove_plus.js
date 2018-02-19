@@ -1,23 +1,23 @@
 (function ($) {
 
-		const blockedPapers = [
-			"www.vg.no",
-			"www.tb.no",
-			"www.dagbladet.no",
-			"www.adressa.no",
-			"www.bt.no",
-			"www.tk.no",
-			"www.smp.no",
-			"www.rbnett.no",
-			"www.gjengangeren.no",
-			"www.ta.no",
-			"www.varden.no",
-			"www.avisa-valdres.no",
-			"www.dn.no",
-			"www.ba.no",
-			"www.an.no",
-			"www.itromso.no",
-		]
+	/* const blockedPapers = {
+		"www.vg.no"
+		"www.tb.no"
+		"www.dagbladet.no"
+		"www.adressa.no"
+		"www.bt.no"
+		"www.tk.no"
+		"www.smp.no"
+		"www.rbnett.no"
+		"www.gjengangeren.no"
+		"www.ta.no"
+		"www.varden.no"
+		"www.avisa-valdres.no"
+		"www.dn.no"
+		"www.ba.no"
+		"www.an.no"
+		"www.itromso.no"
+	} */
 
     function getSiteElements (host) {
         var url = host,
