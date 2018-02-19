@@ -95,7 +95,8 @@
             case 'www.smp.no':
             case 'www.rbnett.no':
             case 'www.itromso.no':
-                var targets = $('.payed')
+                var targets = [$('.relatedArticles .payed'), $('.payed > a')]
+                console.log(targets);
                 $.each(targets, function (index, element) {
                     elements.push($(this))
                     count++
@@ -141,8 +142,6 @@
         for (var i = 0; i < nodes_to_remove.elements.length; i++) {
             if (nodes_to_remove.elements[i].length > 0 && typeof nodes_to_remove.elements[i] !== 'undefined') {
                 var currentElement = nodes_to_remove.elements[i]
-                var cachedHeight = currentElement.height()
-                var cachedWidth = currentElement.width()
 
                 currentElement.css('display', 'none')
             }
