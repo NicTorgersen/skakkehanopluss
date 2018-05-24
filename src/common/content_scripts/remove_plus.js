@@ -1,5 +1,6 @@
 (function () {
-
+    
+    // src: https://stackoverflow.com/a/24107550/1478808
     function closest(el, selector) {
         var matchesFn;
 
@@ -148,8 +149,6 @@
     style.innerHTML = ".skakke-ha-no-pluss { display: none; }"
     style.type = 'text/css'
     document.getElementsByTagName('head')[0].appendChild(style)
-
-    console.log(nodes_to_remove)
 
     for (var i = 0; i < nodes_to_remove.elements.length; i++) {
         if (typeof nodes_to_remove.elements[i] !== 'undefined') {
