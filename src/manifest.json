@@ -44,6 +44,9 @@
     "*://*.ba.no/*",
     "*://*.an.no/*",
     "*://*.itromso.no/*",
+    "*://*.tu.no/*",
+    "*://*.digi.no/*",
+    "*://*.e24.no/*",
     "notifications",
     "storage"
   ],
@@ -72,7 +75,10 @@
         "*://*.dn.no/",
         "*://*.ba.no/",
         "*://*.an.no/",
-        "*://*.itromso.no/"
+        "*://*.itromso.no/",
+        "*://*.tu.no/*",
+        "*://*.digi.no/*",
+        "*://*.e24.no/*"
       ],
       "js": ["content_scripts/remove_plus.js"]
     }

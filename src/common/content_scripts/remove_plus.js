@@ -129,6 +129,44 @@
                     count++
                 }
             break
+
+			case 'www.digi.no':
+                var targets = document.querySelectorAll('.subscription-banner')
+                for (var i = 0; i < targets.length; i++) {
+                    elements.push(closest(targets[i], 'article'))
+                    count++
+                }
+
+				var eksklusivt = document.querySelectorAll('[data-title="EKSKLUSIVT INNHOLD FOR DIGITALE ABONNENTER"], .subscription-reccs')
+                for (var i = 0; i < eksklusivt.length; i++) {
+                    elements.push(eksklusivt[i])
+                    count++
+                }
+            break
+
+            case 'www.tu.no':
+                var targets = document.querySelectorAll('.subscription-banner')
+                for (var i = 0; i < targets.length; i++) {
+                    elements.push(closest(targets[i], 'article'))
+                    count++
+                }
+
+				var h3 = document.querySelectorAll('h3')
+				for (var i = 0; i < h3.length; i++) {
+					if (h3[i].innerHTML.indexOf('Eksklusivt for digitale abonnenter') != -1) {
+						elements.push(h3[i])
+						count++
+					}
+				}
+            break
+
+            case 'e24.no':
+                var targets = document.querySelectorAll('.df-img-skin-e24pluss')
+                for (var i = 0; i < targets.length; i++) {
+                    elements.push(closest(targets[i], '.article-content'))
+                    count++
+                }
+            break
         }
 
         return {
