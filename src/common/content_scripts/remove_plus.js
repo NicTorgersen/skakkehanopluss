@@ -167,6 +167,21 @@
                     count++
                 }
             break
+
+            case 'www.jarlsbergavis.no':
+                var targets = document.querySelectorAll('article [class*="premium-logo"]')
+                for (var i = 0; i < targets.length; i++) {
+                    elements.push(closest(targets[i], 'article'))
+                    count++
+				}
+				var strong = document.querySelectorAll('strong')
+				for (var i = 0; i < strong.length; i++) {
+					if (strong[i].innerHTML.indexOf('LES OGSÅ') != -1 && strong[i].innerHTML.indexOf('(+)')) {
+						elements.push(closest(strong[i], 'ul'))
+						count++
+					}
+				}
+            break
         }
 
         return {

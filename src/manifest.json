@@ -47,6 +47,7 @@
     "*://*.tu.no/*",
     "*://*.digi.no/*",
     "*://*.e24.no/*",
+    "*://*.jarlsbergavis.no/*",
     "notifications",
     "storage"
   ],
@@ -78,7 +79,8 @@
         "*://*.itromso.no/",
         "*://*.tu.no/*",
         "*://*.digi.no/*",
-        "*://*.e24.no/*"
+        "*://*.e24.no/*",
+        "*://*.jarlsbergavis.no/*"
       ],
       "js": ["content_scripts/remove_plus.js"]
     }
