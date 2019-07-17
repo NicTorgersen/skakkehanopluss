@@ -66,7 +66,7 @@
             break
 
             case "www.tb.no": // amedia lokal
-                var targets = document.querySelectorAll('.am-premium-logo')
+                var targets = document.querySelectorAll('.premium-logo')
 
                 for (var i = 0; i < targets.length; i++) {
                     elements.push(closest(targets[i], 'article'))
