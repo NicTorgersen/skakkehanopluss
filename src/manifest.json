@@ -57,22 +57,22 @@
     {
       "run_at": "document_idle",
       "matches": [
-        "*://*.vg.no/",
-        "*://*.tb.no/",
-        "*://*.dagbladet.no/",
-        "*://*.bt.no/",
-        "*://*.adressa.no/",
-        "*://*.tk.no/",
-        "*://*.smp.no/",
-        "*://*.rbnett.no/",
-        "*://*.gjengangeren.no/",
-        "*://*.ta.no/",
-        "*://*.varden.no/",
-        "*://*.avisa-valdres.no/",
-        "*://*.dn.no/",
-        "*://*.ba.no/",
-        "*://*.an.no/",
-        "*://*.itromso.no/"
+        "*://*.vg.no/*",
+        "*://*.tb.no/*",
+        "*://*.dagbladet.no/*",
+        "*://*.bt.no/*",
+        "*://*.adressa.no/*",
+        "*://*.tk.no/*",
+        "*://*.smp.no/*",
+        "*://*.rbnett.no/*",
+        "*://*.gjengangeren.no/*",
+        "*://*.ta.no/*",
+        "*://*.varden.no/*",
+        "*://*.avisa-valdres.no/*",
+        "*://*.dn.no/*",
+        "*://*.ba.no/*",
+        "*://*.an.no/*",
+        "*://*.itromso.no/*"
       ],
       "js": ["content_scripts/remove_plus.js"]
     }
