@@ -4,14 +4,12 @@
   "short_name": "Ska'kke ha no' +",
   "description": "Fjerner plussartikler fra en rekke norske nettaviser.",
   "author": "Nic",
-
   "version": "1.6.0",
   "applications": {
     "gecko": {
       "id": "skakkehanopluss@nictorgersen.addons.mozilla.org"
     }
   },
-
 
   "icons": {
     "16": "assets/icon16.png",
@@ -61,22 +59,22 @@
     {
       "run_at": "document_idle",
       "matches": [
-        "*://*.vg.no/",
-        "*://*.tb.no/",
-        "*://*.dagbladet.no/",
-        "*://*.bt.no/",
-        "*://*.adressa.no/",
-        "*://*.tk.no/",
-        "*://*.smp.no/",
-        "*://*.rbnett.no/",
-        "*://*.gjengangeren.no/",
-        "*://*.ta.no/",
-        "*://*.varden.no/",
-        "*://*.avisa-valdres.no/",
-        "*://*.dn.no/",
-        "*://*.ba.no/",
-        "*://*.an.no/",
-        "*://*.itromso.no/",
+        "*://*.vg.no/*",
+        "*://*.tb.no/*",
+        "*://*.dagbladet.no/*",
+        "*://*.bt.no/*",
+        "*://*.adressa.no/*",
+        "*://*.tk.no/*",
+        "*://*.smp.no/*",
+        "*://*.rbnett.no/*",
+        "*://*.gjengangeren.no/*",
+        "*://*.ta.no/*",
+        "*://*.varden.no/*",
+        "*://*.avisa-valdres.no/*",
+        "*://*.dn.no/*",
+        "*://*.ba.no/*",
+        "*://*.an.no/*",
+        "*://*.itromso.no/*"
         "*://*.tu.no/*",
         "*://*.digi.no/*",
         "*://*.e24.no/*",
